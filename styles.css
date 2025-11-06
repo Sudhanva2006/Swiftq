@@ -1,0 +1,60 @@
+:root{
+  --bg:#f6fbff;
+  --card:#ffffff;
+  --accent:#0b67ff;
+  --muted:#666;
+  --danger:#d9534f;
+  --success:#2da44e;
+}
+
+*{box-sizing:border-box;font-family:Inter, system-ui, Arial, sans-serif}
+body{
+  margin:0;background:var(--bg);color:#111;
+}
+header{
+  padding:18px 24px;background:linear-gradient(90deg,#eef6ff,#f8fbff);
+  border-bottom:1px solid #e6eefb;
+}
+header h1{margin:0;font-size:20px}
+header .tagline{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+main.grid{
+  display:grid;grid-template-columns:320px 360px 1fr;gap:18px;padding:20px;
+  align-items:start;
+}
+.card{
+  background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(12,32,80,0.06);
+}
+.card.wide{grid-column:3 / span 1}
+section h2{margin:0 0 10px;font-size:16px}
+
+form{display:flex;flex-direction:column;gap:8px}
+input,select,button{padding:10px;border-radius:8px;border:1px solid #e6eefb}
+button{background:var(--accent);color:#fff;border:none;cursor:pointer}
+button:active{transform:translateY(1px)}
+.small{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}
+
+#patient-info{margin-top:12px;padding:10px;border-radius:8px;background:#f7fbff;border:1px dashed #dfeeff;color:#123}
+.assign-row{display:flex;gap:8px;align-items:center;margin:10px 0}
+#unassigned-list, #assign-patient, #assign-doctor{min-width:140px}
+#unassigned-list li{padding:6px 8px;border-radius:6px;background:#fafbff;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center}
+
+#doctors-container{display:flex;flex-wrap:wrap;gap:10px}
+.doctor-card{width:260px;padding:10px;border-radius:8px;background:#fbfdff;border:1px solid #e9f2ff}
+.doc-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.queue-list{max-height:220px;overflow:auto;padding:6px;background:#fff;border-radius:6px;border:1px solid #f1f6ff}
+.queue-item{display:flex;justify-content:space-between;padding:6px;border-radius:6px;margin-bottom:6px;background:linear-gradient(180deg,#fff,#fbfdff)}
+.queue-item .meta{font-size:12px;color:var(--muted)}
+
+.display{margin-top:12px;padding:12px;border-radius:8px;background:#0b67ff;color:#fff}
+#display-current{font-size:20px;font-weight:700}
+#display-next{margin-top:6px;color:rgba(255,255,255,0.9)}
+
+#notification-log{margin-top:12px}
+#notifs{max-height:220px;overflow:auto;padding:8px;border-radius:8px;background:#fbfbfb;border:1px solid #eee}
+.notif{padding:8px;border-radius:6px;margin-bottom:6px;background:#fff;border-left:4px solid #0b67ff;font-size:13px}
+.notif.em{border-left-color:var(--danger)}
+.notif.sms{border-left-color:#6c757d}
+.notif.wh{border-left-color:#25D366}
+
+footer{padding:12px 20px;color:var(--muted);font-size:13px}

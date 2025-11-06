@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SwiftQ+ Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>SwiftQ+ — Hackathon Prototype</h1>
+    <p class="tagline">Smart hospital queue (demo): tokens · priorities · notifications</p>
+  </header>
+
+  <main class="grid">
+    <!-- Patient Panel -->
+    <section class="card" id="patient-panel">
+      <h2>Patient (Register)</h2>
+      <form id="patient-form">
+        <input id="p-name" placeholder="Your name" required />
+        <select id="p-dept">
+          <option value="General">General OPD</option>
+          <option value="ENT">ENT</option>
+          <option value="Pediatrics">Pediatrics</option>
+          <option value="Cardiology">Cardiology</option>
+        </select>
+        <input id="p-phone" placeholder="Phone (for SMS simulation)" />
+        <label class="small">
+          <input type="checkbox" id="p-emergency" /> Mark as Emergency (if urgent)
+        </label>
+        <button type="submit">Get Token</button>
+      </form>
+
+      <div class="patient-info" id="patient-info">
+        <!-- Filled dynamically -->
+      </div>
+    </section>
+
+    <!-- Admin Panel -->
+    <section class="card" id="admin-panel">
+      <h2>Reception / Admin</h2>
+      <div id="new-patients">
+        <h3>Unassigned Patients</h3>
+        <ul id="unassigned-list"></ul>
+      </div>
+
+      <h3>Assign patient to doctor</h3>
+      <div class="assign-row">
+        <select id="assign-patient"></select>
+        <select id="assign-doctor"></select>
+        <button id="assign-btn">Assign & Generate Token</button>
+        <label class="small">
+          <input type="checkbox" id="assign-emergency" /> Emergency
+        </label>
+      </div>
+
+      <div id="notification-log">
+        <h3>Notification Log</h3>
+        <div id="notifs"></div>
+      </div>
+    </section>
+
+    <!-- Doctors & IoT Display -->
+    <section class="card wide" id="doctors-panel">
+      <h2>Doctors & Live Display</h2>
+      <div id="doctors-container"></div>
+
+      <hr />
+      <div id="display-board" class="display">
+        <h3>Waiting Area Display</h3>
+        <div id="display-current">Now Serving: —</div>
+        <div id="display-next">Up Next: —</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Prototype for hackathon demo — local simulation. Notifications are simulated below.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
