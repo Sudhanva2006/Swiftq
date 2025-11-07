@@ -245,7 +245,7 @@
       if (d) d.queue = d.queue.filter(x => x !== pid);
     }
     p.status = 'removed';
-    notify('sys', `${p.name} removed from queue.`);
+    notify('sys', `${p.name} removed from queue .`);
     renderDoctors();
     renderUnassigned();
   }
