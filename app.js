@@ -8,7 +8,8 @@
     { id: 'd1', name: 'Dr. Mehta', dept: 'General', code: 'G', counter: 0, queue: [] },
     { id: 'd2', name: 'Dr. Iyer', dept: 'ENT', code: 'E', counter: 0, queue: [] },
     { id: 'd3', name: 'Dr. Rao', dept: 'Pediatrics', code: 'P', counter: 0, queue: [] },
-    { id: 'd4', name: 'Dr. Sen', dept: 'Cardiology', code: 'C', counter: 0, queue: [] }
+    { id: 'd4', name: 'Dr. Sen', dept: 'Cardiology', code: 'C', counter: 0, queue: [] },
+    { id: 'd5', name: 'Dr. Samm', dept: 'Neurology', code: 'N', counter: 0, queue: [] }
   ];
 
   // patients storage
