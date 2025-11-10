@@ -5,7 +5,7 @@
 (() => {
   // --- Sample doctors (predefined) ---
   const doctors = [
-    { id: 'd1', name: 'Dr. Mehtaa', dept: 'General', code: 'G', counter: 0, queue: [] },
+    { id: 'd1', name: 'Dr. Nndini Mehtaa', dept: 'General', code: 'G', counter: 0, queue: [] },
     { id: 'd2', name: 'Dr. Sheshadri Iyer', dept: 'ENT', code: 'E', counter: 0, queue: [] },
     { id: 'd3', name: 'Dr. Varun Rao', dept: 'Pediatrics', code: 'P', counter: 0, queue: [] },
     { id: 'd4', name: 'Dr. Sonakshi Sen', dept: 'Cardiology', code: 'C', counter: 0, queue: [] },
